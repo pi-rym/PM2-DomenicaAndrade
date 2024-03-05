@@ -1,0 +1,80 @@
+body{
+    background-color: #030637;
+}
+
+.title{
+    font-size: 4em;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    padding: 0.5em;
+}
+
+.nav1{
+    display: flex;
+    width: 90vw;
+    height: 1vw;
+    //background-color: #910A67;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 1em;
+    color: white;
+    justify-content: space-between;
+}
+
+.nav1 a{
+    width: 90vw;
+    margin-right: 100rem;
+    text-align: justify;
+    text-decoration: none;
+    margin: auto;
+    padding: 2em;
+    background-color: #910A67;
+    height: 1em;
+}
+
+.nav1 a:hover{
+   text-decoration: underline;
+}
+
+#subtitulos{
+    color: white;
+    font-size: 2.5em;
+}
+
+main {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    //align-items:center;
+    margin-top: 250px;
+}
+
+.movie-card{
+    background-color: ;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 250px;
+}
+
+.movie-card img{
+    width: 100%;
+    height: auto;
+    //padding: 1em;
+}
+
+.movie-card h2{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: white;
+    //padding: 1em;
+}
+
+.movie-card p {
+    margin: 5px 0;
+    color: white;
+}
