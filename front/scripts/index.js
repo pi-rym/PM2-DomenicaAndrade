@@ -1,76 +1,51 @@
-console.log(tempData);
-document.addEventListener("DOMContentLoaded", function(){
-    const tempData = [
-        {
-          title: "Guardians of the Galaxy Vol. 2",
-          year: 2017,
-          director: "James Gunn",
-          duration: "2h 16min",
-          genre: ["Action", "Adventure", "Comedy"],
-          rate: 7.7,
-          poster:
-            "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-        },
-        {
-          title: "Star Wars: Episode IV - A New Hope",
-          year: 1977,
-          director: "George Lucas",
-          duration: "2h 1min",
-          genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
-          rate: 8.7,
-          poster:
-            "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
-        },
-        {
-          title: "The Lord of the Rings: The Fellowship of the Ring",
-          year: 2001,
-          director: "Peter Jackson",
-          duration: "2h 58min",
-          genre: ["Action", "Adventure", "Drama", "Fantasy"],
-          rate: 8.8,
-          poster:
-            "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
-        },
-    ];
+const moviesContainer = document.getElementById("movies-container");
 
-    const mainContainer = document.querySelector("main");
-
-    const movieCards = tempData.map(movie => {
-        const movieCard = document.createElement("div");
-        movieCard.classList.add("movie-card");
-
-        const poster = document.createElement("img");
-        poster.src = movie.poster;
-        poster.alt = movie.title;
-        movieCard.appendChild(poster);
-
-        const title = document.createElement("h2");
-        title.textContent = movie.title;
-        movieCard.appendChild(title);
-
-        const year = document.createElement("p");
-        year.textContent = `Year: ${movie.year}`;
-        movieCard.appendChild(year);
-
-        const director = document.createElement("p");
-        director.textContent = `Director ${movie.director}`;
-        movieCard.appendChild(director);
-
-        const duration = document.createElement("p");
-        duration.textContent = `Duration: ${movie.duration}`;
-        movieCard.appendChild(duration);
-
-        const genre = document.createElement("p");
-        genre.textContent = `Genre: ${movie.genre.join(", ")}`;
-        movieCard.appendChild(genre);
-
-        const rate = document.createElement("p");
-        rate.textContent = `Rate: ${movie.rate}`;
-        movieCard.appendChild(rate);
-
-        return movieCard;
-    });
-
-    mainContainer.append(...movieCards);
-      
+$.get("https://students-api.2.us-1.fl0.io/movies", (data) =>{
+  renderCards(data)
 });
+    
+const renderCards = (data) => {
+  data.forEach((movie) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const title = document.createElement("h2");
+    title.classList.add("card-title");
+    title.innerHTML = movie.title;
+
+    const poster = document.createElement("img");
+    poster.classList.add("card-image");
+    poster.src = movie.poster;
+
+    const year = document.createElement("p");
+    year.classList.add("card-text");
+    year.innerHTML = movie.year;
+
+    const director = document.createElement("p");
+    director.classList.add("card-text");
+    director.innerHTML = movie.director;
+
+    const duration = document.createElement("p");
+    duration.classList.add("card-text");
+    duration.innerHTML = movie.duration;
+
+    const genre = document.createElement("p");
+    genre.classList.add("card-text");
+    genre.innerHTML = movie.genre;
+
+    const rate = document.createElement("p");
+    rate.classList.add("card-text");
+    rate.innerHTML = movie.rate;
+
+
+    card.appendChild(poster);
+    card.appendChild(title);
+    card.appendChild(year);
+    card.appendChild(director);
+    card.appendChild(duration);
+    card.appendChild(genre);
+    card.appendChild(rate);
+
+    moviesContainer.appendChild(card);
+  });
+}

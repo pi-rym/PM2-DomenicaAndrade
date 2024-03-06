@@ -8,6 +8,7 @@ body{
     font-weight: bold;
     margin: auto;
     padding: 0.5em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav1{
@@ -21,6 +22,7 @@ body{
     padding: 1em;
     color: white;
     justify-content: space-between;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav1 a{
@@ -52,29 +54,50 @@ main {
     margin-top: 250px;
 }
 
-.movie-card{
-    background-color: ;
+
+
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.card {
+    width: 200px; 
+    margin: 80px; 
+    border: 1px solid #910A67; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-    width: 250px;
+    justify-content: space-around;
+    transition: background-color 0.3s;
+    padding: 10px;
+    padding: 1em;
 }
-
-.movie-card img{
-    width: 100%;
-    height: auto;
-    //padding: 1em;
-}
-
-.movie-card h2{
-    font-size: 1.5rem;
-    margin: 10px 0;
+  
+.card-title {
+    font-size: 18px; 
+    margin-bottom: 5px; 
     color: white;
-    //padding: 1em;
+    font-weight: bold;
+    padding: 1em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+.card-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+}
+  
+.card-text {
+    font-size: 12px; 
+    padding: 0.5em;
+    justify-content: center;
+    color: white; 
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.movie-card p {
-    margin: 5px 0;
-    color: white;
+.card:hover {
+    background-color: #3C0753;
 }
