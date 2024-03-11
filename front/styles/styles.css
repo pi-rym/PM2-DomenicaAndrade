@@ -1,85 +1,36 @@
-body{
+.body{
     background-color: #030637;
 }
-
-.title{
-    font-size: 4em;
-    color: white;
-    font-weight: bold;
-    margin: auto;
-    padding: 0.5em;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.nav1{
-    display: flex;
-    width: 90vw;
-    height: 1vw;
-    //background-color: #910A67;
-    text-align: center;
-    text-decoration: none;
-    margin: auto;
-    padding: 1em;
-    color: white;
-    justify-content: space-between;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.nav1 a{
-    width: 90vw;
-    margin-right: 100rem;
-    text-align: justify;
-    text-decoration: none;
-    margin: auto;
-    padding: 2em;
-    background-color: #910A67;
-    height: 1em;
-}
-
-.nav1 a:hover{
-   text-decoration: underline;
-}
-
-#subtitulos{
-    color: white;
-    font-size: 2.5em;
-}
-
-main {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    //align-items:center;
-    margin-top: 250px;
-}
-
-
-
 
 #movies-container {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 25px;
 }
-  
+
 .card {
     width: 200px; 
-    margin: 80px; 
+    margin: 20px; 
     border: 1px solid #910A67; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); 
     border-radius: 8px;
     justify-content: space-around;
     transition: background-color 0.3s;
-    padding: 10px;
-    padding: 1em;
+    padding: 5px;
+    height: auto;
+    //padding-top: 5em;
 }
-  
+
+.card:hover {
+    background-color: #3C0753;
+}
+
 .card-title {
     font-size: 18px; 
-    margin-bottom: 5px; 
+    margin-bottom: 1px; 
     color: white;
     font-weight: bold;
-    padding: 1em;
+    //padding: 0.5px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
   
@@ -91,13 +42,39 @@ main {
   
 .card-text {
     font-size: 12px; 
-    padding: 0.5em;
+    //padding: 0.5em;
     justify-content: center;
     color: white; 
     font-weight: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.card:hover {
-    background-color: #3C0753;
+.nav1{
+    
+    width: 95vw;
+    height: 1vw;
+    text-decoration: none;
+    margin: 2.5em;
+    padding-left: 30em;
+    color: white;
+    justify-content: flex-start;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 20px;
 }
+
+.nav1 a{
+    width: 90vw;
+    margin-right: 200rem;
+    text-align: justify;
+    text-decoration: none;
+    margin: auto;
+    padding: 2em;
+    background-color: #910A67;
+    height: 1em;
+    justify-content: flex-start;
+}
+
+.nav1 a:hover{
+   
+}
+

@@ -31,4 +31,4 @@ const tempData = [
   },
 ];
 
-export default tempData;
+//export default tempData;
