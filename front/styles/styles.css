@@ -19,6 +19,7 @@
     padding: 5px;
     height: auto;
     //padding-top: 5em;
+    color: 
 }
 
 .card:hover {
@@ -28,7 +29,7 @@
 .card-title {
     font-size: 18px; 
     margin-bottom: 1px; 
-    color: white;
+    color: #030637;
     font-weight: bold;
     //padding: 0.5px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -44,7 +45,7 @@
     font-size: 12px; 
     //padding: 0.5em;
     justify-content: center;
-    color: white; 
+    color: #030637; 
     font-weight: bold;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -54,8 +55,8 @@
     width: 95vw;
     height: 1vw;
     text-decoration: none;
-    margin: 2.5em;
-    padding-left: 30em;
+    margin: 6em;
+    padding-left: 22em;
     color: white;
     justify-content: flex-start;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -78,3 +79,6 @@
    
 }
 
+input[name="genre[]"]{
+    margin: 0;
+}

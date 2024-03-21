@@ -49,4 +49,4 @@ const renderCards = (data) => {
 };
 
 module.exports = renderCards;
-  
+//export default renderCards;
